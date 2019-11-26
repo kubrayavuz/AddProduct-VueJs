@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-center">Ürün Ekleme Uygulamasıdır</h1>
+    <h1 class="text-center">Ürün Ekleme Uygulaması</h1>
     <hr>
       <app-new-product></app-new-product>
     <br><br>
@@ -29,17 +29,12 @@ import Products from "./components/Products";
     },
     data: function() {
       return {
-        productList: [],
-        product : {
-            selectedImage: null
-        }
+       
+     
       }
     },
     methods: {
-      onChange(e) {
-        const file = e.target.files[0];
-        this.product.selectedImage = URL.createObjectURL(file);
-      }
+     
     }
   }
 </script>
