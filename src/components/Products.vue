@@ -15,8 +15,8 @@
 </template>
 <script>
 
-import Product from "./Product";
-import {eventBus} from "../main";
+	import {eventBus} from "../main";
+	import Product from "./Product";
 
 	export default{
 		components:{
@@ -29,7 +29,12 @@ import {eventBus} from "../main";
 		},
 		created(){
 			eventBus.$on("productAdded",(product) =>{
-				this.productList.push(product);
+				if(this.productList.length < 2){
+					this.productList.push(product);
+					eventBus.$emit("progressBarUpdated", this.productList.length);
+				} else  {
+					alert("Daha fazla ürün ekleyemezsiniz..")
+				}
 			} );
 		}
 	}
