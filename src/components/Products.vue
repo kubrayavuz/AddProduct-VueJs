@@ -16,6 +16,7 @@
 <script>
 
 import Product from "./Product";
+import {eventBus} from "../main";
 
 	export default{
 		components:{
@@ -25,6 +26,11 @@ import Product from "./Product";
 			return{
 				productList: [],
 			}
+		},
+		created(){
+			eventBus.$on("productAdded",(product) =>{
+				this.productList.push(product);
+			} );
 		}
 	}
 </script>
