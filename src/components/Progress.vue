@@ -1,10 +1,11 @@
 <template>
 	<div class="progress">
       <div class="progress-bar bg-info" role="progressbar" :style="{ width:progress + '%' }" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        {{currentItem}}/10
+        {{ currentItem }}/10
       </div>
     </div>
 </template>
+
 <script>
 	import {eventBus} from "../main";
 
@@ -19,11 +20,10 @@
 			eventBus.$on("progressBarUpdated", (productListCount) => {
 				this.currentItem = productListCount;
 				this.progress = productListCount * 10 ;
-					console.log("Consoel yazdırıldı2.")
 			})
 		}
 	}
 </script>
-<style>
-	
+
+<style>  
 </style>

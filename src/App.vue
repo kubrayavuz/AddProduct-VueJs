@@ -1,40 +1,25 @@
 <template>
   <div class="container">
-    <h1 class="text-center">Ürün Ekleme Uygulaması</h1>
+    <h1 class="text-center">Product Adding Page</h1>
     <hr>
-      <app-new-product></app-new-product>
+    <app-new-product></app-new-product>
     <br><br>
-      <app-progress></app-progress>
+    <app-progress></app-progress>
     <br><br>
-    <h3 class="text-center">Eklenen Ürünlerin Listesi</h3>
-    <hr>
     <app-products></app-products>
-
   </div>
-
-
 </template>
 
 <script>
-
-import NewProduct from "./components/NewProduct";
-import Progress from "./components/Progress";
-import Products from "./components/Products";
+  import NewProduct from "./components/NewProduct";
+  import Progress from "./components/Progress";
+  import Products from "./components/Products";
 
   export default {
-    components:{
+    components: {
       appNewProduct : NewProduct,
       appProgress : Progress,
       appProducts : Products
-    },
-    data: function() {
-      return {
-       
-     
-      }
-    },
-    methods: {
-     
     }
   }
 </script>
@@ -45,23 +30,18 @@ import Products from "./components/Products";
     padding-top: 20px;
     padding-bottom: 20px;
   }
-
-  .card{
+    .card{
     margin-right: 5px;
     margin-bottom: 5px;
   }
-
   .card:last-child{
     margin-right: 0px;
   }
-
   .col-md-2{
     max-width: 15.666667%!important;
   }
-
   .product-container{
     margin-left: 15px;
   }
-
 </style>
 
