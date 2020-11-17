@@ -1,4 +1,4 @@
-# urun-ekleme
+# urun-ekleme-projesi
 
 > A Vue.js project
 
